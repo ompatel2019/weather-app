@@ -87,7 +87,7 @@ async function checkWeather(city) {
         locationElem.innerHTML = `${data.name}`;
         tempElem.innerHTML = `${temp} &deg;`;
         weatherDescElem.innerHTML = `${weatherDescription}`;
-        humidityElem.innerHTML = `${humidity}`;
+        humidityElem.innerHTML = `${humidity}%`;
 
         sunriseElem.innerHTML = `${sunrise}`;
         sunsetElem.innerHTML = `${sunset}`;
@@ -97,7 +97,7 @@ async function checkWeather(city) {
         if (precipitation === '0mm') {
             precipitationElem.innerHTML = '0mm';
         } else {
-            precipitationElem.innerHTML = `${weatherDescription}`;
+            precipitationElem.innerHTML = `${weatherDescription}mm`;
         }
         
     } catch (error) {
